@@ -1,5 +1,7 @@
 # TinyUrl-mongoose-express
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/YozhikM/tinyUrl-mongoose-express.svg)](https://greenkeeper.io/)
+
 This is a simple shortening link, based on Mongoose and Express
 
 ## Requirements
