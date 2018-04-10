@@ -26,6 +26,27 @@ git clone https://github.com/YozhikM/tinyUrl-mongoose-express.git
 
 In the schema folder, you need to connect your database. Then connect the router to your Express routing.
 
+```
+// schema
+...
+mongoose.model('Tinyurl', TinyUrlSchema);
+...
+```
+
+```
+// server
+
+import { tinyUrlRouter } from 'tinyUrl-mongoose-express';
+...
+const router = expess.Router();
+router.use('/u', tinyUrlRouter());
+...
+```
+
 ### Step 3
 
 Create records in Mongo and use!
+
+```
+TinyUrl.create({ url: 'example.com/hello' });
+```
