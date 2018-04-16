@@ -12,6 +12,6 @@
     "mongoose-plugin-autoinc": "^1.1.9"
   },
   "devDependencies": {
-    "flow-bin": "^0.69.0"
+    "flow-bin": "^0.70.0"
   }
 }
