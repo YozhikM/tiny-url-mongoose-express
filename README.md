@@ -1,6 +1,6 @@
 # TinyUrl-mongoose-express
 
-[![install size](https://packagephobia.now.sh/badge?p=tiny-url-mongoose-express@1.0.2)](https://packagephobia.now.sh/result?p=tiny-url-mongoose-express@1.0.2)
+[![install size](https://packagephobia.now.sh/badge?p=tiny-url-mongoose-express@1.0.3)](https://packagephobia.now.sh/result?p=tiny-url-mongoose-express@1.0.3)
 [![Greenkeeper badge](https://badges.greenkeeper.io/YozhikM/tinyUrl-mongoose-express.svg)](https://greenkeeper.io/)
 ![FlowType compatible](https://img.shields.io/badge/flowtype-compatible-brightgreen.svg)
 
