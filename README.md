@@ -30,6 +30,13 @@ TinyUrl: MongooseModel;
 
 ```js
 TinyUrlSchema: MongooseSchema;
+
+{
+  _id: number; // start at 100
+  url: string; // canonical URL
+  createdAt: ?Date; // created automatically
+  encodedId: string;
+}
 ```
 
 ## How to use
@@ -44,19 +51,19 @@ yarn add tiny-url-mongoose-express
 
 In the schema folder, you need to connect your database. Then connect the router to your Express routing.
 
-```
+```js
 // schema
 import { TinyUrl } from 'tiny-url-mongoose-express'
 ```
 
-```
+```js
 // server
 
 import { tinyUrlRouter } from 'tiny-url-mongoose-express';
-...
+//
 const router = expess.Router();
 router.use('/u', tinyUrlRouter());
-...
+//
 ```
 
 ### Step 3
