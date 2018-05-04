@@ -1,7 +1,7 @@
 {
   "name": "tiny-url-mongoose-express",
-  "version": "1.0.2",
-  "main": "index.js",
+  "version": "1.0.3",
+  "main": "lib/index.js",
   "repository": "https://github.com/YozhikM/tinyUrl-mongoose-express.git",
   "author": "YozhikM <botev.st@gmail.com>",
   "license": "MIT",
