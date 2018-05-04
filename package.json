@@ -1,6 +1,6 @@
 {
   "name": "tinyUrl-mongoose-express",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "repository": "https://github.com/YozhikM/tinyUrl-mongoose-express.git",
   "author": "YozhikM <botev.st@gmail.com>",
@@ -21,7 +21,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
     "express": "^4.16.3",
-    "flow-bin": "^0.69.0",
+    "flow-bin": "^0.71.0",
     "mongoose": "^5.0.13",
     "mongoose-plugin-autoinc": "^1.1.9",
     "nodemon": "^1.17.3"
