@@ -1,7 +1,7 @@
 /* @flow */
 
 import crypto from 'crypto';
-import { Schema } from 'mongoose';
+import mongoose, { Schema, Model } from 'mongoose';
 import autoIncrement from 'mongoose-plugin-autoinc';
 
 export const TinyUrlSchema = new Schema(
@@ -31,7 +31,7 @@ TinyUrlSchema.plugin(autoIncrement, {
   incrementBy: 1,
 });
 
-export class TinyUrlDoc /* :: extends Mongoose$Document */ {
+export class TinyUrlDoc /* :: extends Model */ {
   // $FlowFixMe
   _id: number;
   url: string;
@@ -77,7 +77,7 @@ export class TinyUrlDoc /* :: extends Mongoose$Document */ {
   static _sign(text: string): string {
     return crypto
       .createHash('md5')
-      .update(`${text}${process.env.TINY_URL_SECRET_KEY}`)
+      .update(`${text}${process.env.TINY_URL_SECRET_KEY || 'YOUR_SECRET_KEY'}`)
       .digest('base64')
       .slice(-4, -2);
   }
@@ -90,7 +90,7 @@ export class TinyUrlDoc /* :: extends Mongoose$Document */ {
   }
 
   static async encrypt(fullUrl: string, uri: ?string = 'https://example.kz/u/'): Promise<string> {
-    const newTinyUrl = await TinyUrl.create({ url: fullUrl });
+    const newTinyUrl = await this.create({ url: fullUrl });
     return `${uri || ''}${newTinyUrl.encodedId}`;
   }
 
@@ -117,4 +117,4 @@ export class TinyUrlDoc /* :: extends Mongoose$Document */ {
 
 TinyUrlSchema.loadClass(TinyUrlDoc);
 
-export const TinyUrl = DB.data.model('Tinyurl', TinyUrlSchema);
+export const TinyUrl = mongoose.model('Tinyurl', TinyUrlSchema);

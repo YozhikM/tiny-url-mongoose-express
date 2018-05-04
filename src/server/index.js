@@ -1,17 +1,17 @@
 /* @flow */
 
 import express from 'express';
-import type { $Request, $Response } from 'express';
-import { TinyUrl } from '../schema';
+import type { $Request, $Response, Router } from 'express';
+import { TinyUrlDoc } from '../schema';
 
-export default function tinyUrlRouter() {
+export default function tinyUrlRouter(): Router {
   const router = express.Router();
 
   router.get('/:tinyurl', async (req: $Request, res: $Response) => {
     const { params, originalUrl } = req;
 
     try {
-      const url = await TinyUrl.decrypt(params.tinyurl);
+      const url = await TinyUrlDoc.decrypt(params.tinyurl);
       if (url) {
         const originalUrlSearch = originalUrl.split('?')[1];
         const newUrl = [url];
