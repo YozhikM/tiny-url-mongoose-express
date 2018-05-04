@@ -12,6 +12,28 @@ To make short urls, you need the following recipe:
 2.  Mongoose
 3.  Express
 
+## API
+
+### tinyUrlRouter()
+
+```js
+tinyUrlRouter(): Router;
+```
+
+### TinyUrl
+
+Instance of a class
+
+```js
+TinyUrl: MongooseModel;
+```
+
+### TinyUrlSchema
+
+```js
+TinyUrlSchema: MongooseSchema;
+```
+
 ## How to use
 
 ### Step 1
