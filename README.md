@@ -2,12 +2,11 @@
 
 [![install size](https://packagephobia.now.sh/badge?p=tiny-url-mongoose-express@1.0.2)](https://packagephobia.now.sh/result?p=tiny-url-mongoose-express@1.0.2)
 [![Greenkeeper badge](https://badges.greenkeeper.io/YozhikM/tinyUrl-mongoose-express.svg)](https://greenkeeper.io/)
+![FlowType compatible](https://img.shields.io/badge/flowtype-compatible-brightgreen.svg)
 
 This is a simple shortening link, based on Mongoose and Express
 
 ## Requirements
-
-To make short urls, you need the following recipe:
 
 * [express](https://github.com/expressjs/express)
 * [mongoose](https://github.com/Automattic/mongoose)
@@ -22,8 +21,6 @@ tinyUrlRouter(): Router;
 ```
 
 ### TinyUrl
-
-Instance of a class
 
 ```js
 TinyUrl: MongooseModel;
