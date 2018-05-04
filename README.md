@@ -1,5 +1,6 @@
 # TinyUrl-mongoose-express
 
+[![install size](https://packagephobia.now.sh/badge?p=tiny-url-mongoose-express@1.0.2)](https://packagephobia.now.sh/result?p=tiny-url-mongoose-express@1.0.2)
 [![Greenkeeper badge](https://badges.greenkeeper.io/YozhikM/tinyUrl-mongoose-express.svg)](https://greenkeeper.io/)
 
 This is a simple shortening link, based on Mongoose and Express
