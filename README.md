@@ -8,9 +8,9 @@ This is a simple shortening link, based on Mongoose and Express
 
 To make short urls, you need the following recipe:
 
-1.  MongoDB
-2.  Mongoose
-3.  Express
+* [express](https://github.com/expressjs/express)
+* [mongoose](https://github.com/Automattic/mongoose)
+* [mongoose-plugin-autoinc](https://github.com/nodkz/mongoose-plugin-autoinc)
 
 ## API
 
@@ -38,10 +38,8 @@ TinyUrlSchema: MongooseSchema;
 
 ### Step 1
 
-You can freely clone my project and take away from it two main files that you can change according to your needs.
-
 ```
-git clone https://github.com/YozhikM/tinyUrl-mongoose-express.git
+yarn add tiny-url-mongoose-express
 ```
 
 ### Step 2
@@ -50,15 +48,13 @@ In the schema folder, you need to connect your database. Then connect the router
 
 ```
 // schema
-...
-mongoose.model('Tinyurl', TinyUrlSchema);
-...
+import { TinyUrl } from 'tiny-url-mongoose-express'
 ```
 
 ```
 // server
 
-import { tinyUrlRouter } from 'tinyUrl-mongoose-express';
+import { tinyUrlRouter } from 'tiny-url-mongoose-express';
 ...
 const router = expess.Router();
 router.use('/u', tinyUrlRouter());

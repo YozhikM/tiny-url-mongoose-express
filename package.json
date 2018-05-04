@@ -1,5 +1,5 @@
 {
-  "name": "tinyUrl-mongoose-express",
+  "name": "tiny-url-mongoose-express",
   "version": "1.0.2",
   "main": "index.js",
   "repository": "https://github.com/YozhikM/tinyUrl-mongoose-express.git",
