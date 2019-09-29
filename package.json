@@ -24,6 +24,6 @@
     "flow-bin": "^0.71.0",
     "mongoose": "^5.0.13",
     "mongoose-plugin-autoinc": "^1.1.9",
-    "nodemon": "^1.17.3"
+    "nodemon": "^1.19.3"
   }
 }
